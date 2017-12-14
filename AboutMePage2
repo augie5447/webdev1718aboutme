@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+h1{ 
+    font-size: 70px;
+    font-family: cursive
+     }
+ol{
+    font-family: Comic Sans MS
+    }
+</style>   
+    <head>
+    <center>
+        <h1 >Soccer </h1>
+        <hr>
+    </head>
+    </center>
+    <body style="background-color: #2998E4">
+        <center>
+        <h3> All About Soccer</h3>
+        <ol>
+            <img src="http://www.stadiumguide.com/wp-content/uploads/emirates_top.jpg" style="border: #000000 6px outset; width: 400px; display: block; margin-left: auto; margin-right: auto;" title="The Emirates Stadium" alt="The Emirates Stadium">
+            <i><p> Football or soccer, is a team sport played between two teams of eleven players with a ball. It is played by 250 million players in over 200 countries and dependencies, making it the world's most popular sport. The game is played on a rectangular field with a goal at each end. The object of the game 
+            is to score by getting the ball into the opposing goal. The team with the most points after two 45 minute halfs is the winner unless extra time is needed whihc adds another 30 minutes, and finally if a winner is not decided it is then decided by a penalty shootout. According to FIFA, the Chinese competitive
+            game cuju is the earliest form of football for which there is evidence. Cuju players could use any part of the body apart from hands and the intent was kicking a ball through an opening into a net. It was during the Han Dynasty (206 BC – 220 AD), cuju games were standardised and rules were established.
+            The sport is popular around the world with top class leauges such as the English Premier League, La Liga, Seria A, and the Bundesliga all hosted in Europe. Although Europe dominates soccer North and South America still boast their own top class leauges such as Liga MX, Argentine Primera, Brasileirao and the MLS. </p></i>
+        </ol>
+        <hr>
+        </center>
+    </body>
+    <center>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Liga_MX.svg/1200px-Liga_MX.svg.png" style="border: #000000 6px outset; width: 200px; display: block; margin-left: auto; margin-right: auto;" title="Liga MX" alt="Liga MX">
+    <a href="www.ligabancomer.mx/">Click here for Liga MX scores and games .</a>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1280px-Premier_League_Logo.svg.png" style="border: #000000 6px outset; width: 200px; display: block; margin-left: auto; margin-right: auto;" title="English Premier League" alt="English Premier League">
+    <a href="https://www.premierleague.com/"> Click here for English Premier League scores and games.</a>
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg" style="border: #000000 6px outset; width: 200px; display: block; margin-left: auto; margin-right: auto;" title="Bundesliga" alt="Bundesliga">
+    <a href="www.bundesliga.com/en/">Click here for Bundesliga scores and games.</a>
+    <img src="https://lh4.googleusercontent.com/-E-P3owrEULM/AAAAAAAAAAI/AAAAAAAA81s/6h85D5AaOgI/s0-c-k-no-ns/photo.jpg" style="border: #000000 6px outset; width: 200px; display: block; margin-left: auto; margin-right: auto;" title="MLS" alt="MLS">
+    <a href="https://www.mlssoccer.com/">Click here for MLS scores and games.</a>
+    <img src="http://img.fifa.com/mm/photo/affederation/administration/02/31/93/65/2319365_full-lnd.jpg" style="border: #000000 6px outset; width: 200px; display: block; margin-left: auto; margin-right: auto;" title="FIFA" alt="FIFA">
+    <a href="www.fifa.com/">Click here for scores and games around the world.</a>
+    </center>
+</html>

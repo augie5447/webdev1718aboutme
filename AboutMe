@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+h1{ 
+    font-size: 70px;
+    font-family: cursive
+     }
+ol{
+    font-family: Comic Sans MS
+    }
+</style>   
+    <head>
+    <center>
+        <h1 >Agustin Garcia </h1>
+        <img src="www.pawderosa.com/images/puppies.jpg" alt="11">
+        <hr>
+    </head>
+    </center>
+    <body style="background-color: #2998E4">
+        <center>
+        <h3>    My Interests</h3>
+        <ol>
+            <li><a href="AboutMePage2.html">Soccer</a></li>
+            <i><p>Soccer is one of the most popular sports in the world. With millions of players around the world and plenty of different leagues to watch, soccer brings people together. With millions watching major competetions such as the World Cup soccer is valued by everyone. </p></i>
+            <img src="https://cdn1.pri.org/sites/default/files/story/images/RTSG14V.jpg" style="border: #000000 6px outset; width: 200px; display: block; margin-left: auto; margin-right: auto;" title="English Premier League" alt="English Premier League">
+            <li><a href="AboutMePage3.html">Video Games</a></li>
+            <i><p>Video games is my favorite pastime. With many different variety games available to play, my favorites are sports and first person shooter. For example my favorite games to play are FIFA and Overwatch.</p></i>
+            <img src="https://wiki.gamedetectives.net/images/b/bf/Overwatch_logo.jpg" style="border: #000000 6px outset; width: 200px; display: block; margin-left: auto; margin-right: auto;" title="Overwatch" alt="Overwatch">
+            <li><a href="AboutMePage4.html">Yugioh</a></li>
+            <i><p> Yugioh is a trading card game that I enjoy to play. Although I fisrt started to enjoy it when I first began to watch the anime. With years continuing to pass the game continues to evolve with new cards and strategies.</p></i>
+            <img src="https://vignette.wikia.nocookie.net/fygo/images/d/d2/Blue_Eyes_White_Dragon_5_by_Riomak.jpg/revision/latest?cb=20100418021156" style="border: #000000 6px outset; width: 200px; display: block; margin-left: auto; margin-right: auto;" title="Blue-Eyes White Dragon" alt="Blue-Eyes White Dragon">
+        </ol>
+        <hr>
+        </center>
+    </body>
+</html>
