@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
-        <title>Towed Vehicles</title>
+        <title>Resaurant</title>
+        
         <style>
-            p, h1 {font-family: helvetica;}
+            p, h1 {font-family: Comic Sans MS;}
             p {font-size:1.5em;line-height:1.5em; margin-left: 24px;}
             pre {font-size: 2em;}
-            div { border: 1px solid black; margin: 4px; border-radius: 5px; background-color: #ededed}
+            h1 { border: 10px solid Black; margin: 4px; border-radius: 5px; background-color: #F53}
+            p { border: 10px solid Black; margin: 4px; border-radius: 5px; background-color: #F59}
+           #map {
+            height: 400px;
+            width: 100%;
+           }
         </style>
     </head>
     <body>
-    <h1>Open pot hole service requests</h1>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 41.8781, lng: -87.6298};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+    </script>
+    <h1>Food Inspections Results</h1>
+    
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
     <script>
         /*
             This script retrieves 311 pot hole service request data for 
@@ -24,13 +50,13 @@
         */
 
         // base URL to the food inspections data
-        var baseURL = 'https://data.cityofchicago.org/resource/_311-potholes.json';
-        
+        var baseURL = 'https://data.cityofchicago.org/resource/cwig-ma7x.json';
         // optional filters we're appending - status
-        var filters = '?status=Open&zip=60618';
+
         
         // full URL
-        var url = baseURL + filters;
+        
+        var url = baseURL;
         
         console.log (url);
         
@@ -45,11 +71,13 @@
                     // loop through the records
                     
                     $.each(data, function(index, value){
-                       var html = "<div><h1>" + value.type_of_service_request + "</h1>" +
-                                    "<p>Status: " + value.status + "<br>" +
-                                    "Service request number: " + value.service_request_number +
+                       var html =  "<div><h1>" + "Name: " + value.dba_name  + "</h1>" +
+                                    "<p>Results: " + value.results + "<br>" +
+                                    "Address: " + value.address + "<br>" + 
+                                    
                                     "</p>" +
                                     "</div>";
+                                    
                                     
                         $("body").append(html);
                     });
@@ -59,6 +87,10 @@
         )
         
         
+
     </script>
     </body>
+    
 </html>
+
+  
