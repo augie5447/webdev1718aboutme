@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>List of Failed and Passed Inspections of Restaraunts</h3>
+    <div id="map"></div>
+           <script>
+        var inspectionMap, inspectionLocation;
+        function initMap(){
+            inspectionLocation = {lat: 41.8781, lng: -87.6298};
+            inspectionMap = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: inspectionLocation
+            });
+        }
+        
+        function addMarker(obj){
+            var inspLoc = {
+                lat: obj.location.coordinates[0],
+                lng: obj.location.coordinates[1]
+            }
+            console.log(inspLoc);
+        }
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        
+        var marker = new google.maps.Marker({
+          position: inspLoc,
+          map: inspectionMap,
+          title: obj.dba_name
+        });
+        marker.addListerner('click', function(){
+            infowindow.open(inspectionMap,marker);
+        })
+       </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <script>
+           var inspections;
+           var inspectionsBaseURL = 'https://data.cityofchicago.org/resource/cwig-ma7x.json';
+           var inspectionsURL = inspectionsBaseURL + filters;
+           console.log(inspectionsURL);
+          
+          
+           $(function(){
+               initMap();
+               $.getJSON(inspectionsURL)
+               .done(function(data){
+                   console.log(data);
+                   
+                   $.each(data, function(index, value){
+                       addMarker(value);
+                   });
+               })
+           })
+       </script>
+    
+  </body>
+</html>
