@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="400" style="border:10px solid #CCA816;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+// Create gradient
+var gradient = ctx.createLinearGradient(10, 100, 500, 100);
+gradient.addColorStop(0, '#FF4CB6');
+gradient.addColorStop(1 / 6, '#FF99D5');
+gradient.addColorStop(2 / 6, '#CFFAFF');
+gradient.addColorStop(3 / 6, '#B2F8FF');
+gradient.addColorStop(4 / 6, 'purple');
+gradient.addColorStop(5 / 6, 'indigo');
+gradient.addColorStop(1, 'violet');
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, 400, 400);
+
+
+ctx.moveTo(100,00);
+ctx.lineTo(50,150);
+ctx.lineTo(150,150);
+ctx.closePath();
+ctx.lineWidth = 5;
+ctx.strokeStyle = 'white';
+ctx.lineJoin = "round";
+ctx.fillStyle = "pink";
+ctx.fill();
+ctx.stroke();
+
+
+
+
+ctx.moveTo(50,150);
+ctx.lineTo(50,200);
+ctx.lineTo(80,200);
+ctx.lineTo(80,150);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+
+ctx.moveTo(150,150);
+ctx.lineTo(150,200);
+ctx.lineTo(120,200);
+ctx.lineTo(120,150);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+
+
+
+ctx.beginPath();
+ctx.moveTo(350, 250);
+ctx.lineTo(300,250);
+ctx.lineTo(350,250);
+ctx.lineTo(350,300);
+ctx.lineTo(220,300);
+ctx.lineTo(220,170);
+ctx.lineTo(350,170);
+ctx.lineTo(350,200);
+ctx.lineTo(250,200);
+ctx.lineTo(250,280);
+ctx.lineTo(330,280);
+ctx.lineTo(330,265);
+ctx.lineTo(300,265);
+ctx.lineTo(300,250);
+ctx.closePath();
+ctx.strokeStyle = "white";
+ctx.fillStyle = "purple";
+ctx.fill();
+ctx.stroke();
+
+
+</script>
+
+</body>
+</html>
