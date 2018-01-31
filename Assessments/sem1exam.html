@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+h1 {
+     padding: 6px;
+    background-color: #5DBCD2;
+}
+
+h3 {
+    padding: 6px;
+     background-color: #5DBCD2;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+</style>
+
+
+
+  <div class="container-fluid">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<center>
+<h1><u>Agustin Garcia</u></h1>
+<h3><i>Class Period 1</i></h3>
+<hr size= "6px" color= "black">
+<body style="background-color:#00bcd4;">
+</center>
+    
+    
+
+<p><Strong>My Favorite Novel</Strong></p>
+<p>
+<img src="https://upload.wikimedia.org/wikipedia/en/f/f7/TheGreatGatsby_1925jacket.jpeg" alt="The Great Gatsby" style="float:left;width:100px;height:100px;">
+The Great Gatsby is the story of eccentric millionaire Jay Gatsby as told by Nick Carraway, a Midwesterner who lives on Long Island but works in Manhattan. Gatsby's enormous mansion is adjacent to Carraway's modest home, and Carraway becomes curious about his neighbor after being invited to one of his famous parties.
+</p>
+<br></br>
+<hr size= "6px" color= "black">
+<a href="AboutMe.html"><button>Link To My AboutMe Page</button></a>
+<br></br>
+
+
+
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="http://images.financialexpress.com/2016/02/cristiano-ronaldo-re-8.jpg" style="width:400px;height:300px;" alt="Cristiano Ronaldo">
+  <div class="card-block">
+    <h2 class="card-title">Cristiano Ronaldo</h2>
+    <p class="card-text">Cristiano Ronaldo dos Santos Aveiro, is a Portuguese professional footballer who plays as a forward for Spanish club Real Madrid and the Portugal national team.</p>
+    <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" class="btn btn-primary">Link to his Wikipedia Page</a>
+  </div>
+</div>
+<br></br>
+<center>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+
+
+
+  
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="https://vignette.wikia.nocookie.net/teentitans/images/8/8c/Teen_titans.png/revision/latest?cb=20150212183135" style="width:600px;height:400px;" alt="Teen Titans TV Show">
+      <div class="carousel-caption">
+        <h2>Teen Titans TV Show</h2>
+        <p>Teen Titans centers around the five main members of the superhero team: Robin, the intelligent, capable leader of the Teen Titans; Starfire, a quirky, curious alien princess from the planet Tamaran; Cyborg, a half-human/half-robot who is known for his strength and technological prowess; Raven, who draws upon dark energy and psionic abilities; and Beast Boy, a ditzy, good-natured joker who can transform into various animals.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://a248.e.akamai.net/ib.huluim.com/show_key_art/28109?size=1600x600&region=US" style="width:600px;height:400px;" alt="Gravity Falls ">
+      <div class="carousel-caption">
+        <h2>Gravity Falls TV Show</h2>
+        <p>For their summer vacation, 12-year-old Dipper Pines and his twin sister Mabel are dropped off from their home in Piedmont, California to the fictitious town of Gravity Falls, Roadkill County, Oregon to spend the summer with their Great Uncle Stan Pines.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://vignette2.wikia.nocookie.net/star-and-the-forces-of-evil/images/6/67/SVTFOE_season_3_intro_-_screenshot_30.png/revision/latest?cb=20170717214932" style="width:600px;height:400px;" alt="Star vs. The Forces Of Evil">
+      <div class="carousel-caption">
+        <h2>Star vs. The Forces Of Evil TV Show</h2>
+        <p>Star Butterfly is a magical princess from the dimension of Mewni, and the heir to the royal throne of the Butterfly Kingdom. She befriends Marco Diaz and lives with his family while attending Echo Creek Academy. Star and Marco must deal with everyday school life while protecting Star's wand from falling into the hands of Ludo, a villain from Mewni who commands a group of monsters.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</center>
+<br></br>
+<hr>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        
+
+        var baseURL = 'https://data.cityofchicago.org/resource/tt4n-kn4t.json';
+        
+        var url = baseURL;
+        
+        console.log (url);
+        
+        $(
+          
+            
+            $.getJSON(url)
+                .done (function (data) {
+                 
+                    console.log(data)
+                    
+                    $.each(data, function(index, value){
+                       var html =  "<div><h2>" + "Department: " + value.department  + "</h2>" +
+                                    "<p>Job Title: " + value.job_titles + "<br>" +
+                                    "Annual salaries : " + value.annual_salary + "<br>" + 
+                                    "Full time or part time:" + value.full_or_part_time + "<br>"
+                                    "</p>" +
+                                    "</div>";
+                                    
+                                    
+                        $("body").append(html);
+                    });
+                })
+            
+            
+        )
+        
+        
+
+    </script>
+</html>
