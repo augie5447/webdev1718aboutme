@@ -20,6 +20,7 @@ var mainContext = mainCanvas.getContext("2d");
 var canvasWidth = mainCanvas.width;
 var canvasHeight = mainCanvas.height;
 var angle = 0;
+var xPos = 350;
 
 // requesting animations
 var requestAnimationFrame = window.requestAnimationFrame || 
@@ -28,7 +29,7 @@ var requestAnimationFrame = window.requestAnimationFrame ||
                             window.msRequestAnimationFrame;
                             
 // changes fps
-var framesPerSecond = 5;
+var framesPerSecond = 3;
  
  
 // function to create the scene
@@ -52,34 +53,61 @@ function scene() {
       
 // the rectangle
 mainContext.beginPath();
-mainContext.rect(0, 300, 450, 450);
+mainContext.rect(0, xPos, 400, 450);
 mainContext.closePath();
 
+ 
 // the outline
 mainContext.strokeStyle = 'white';
 mainContext.stroke();
 mainContext.fillStyle = "white";
 mainContext.fill();
 
+// if statements to make the snow rise to a specific point
+ xPos -= .5;
+ 
+  if (xPos >= 350) {
+    xPos = 400;
+  }
+  
+  
+ if(xPos <= 250){
+     xPos = 250;
+ }
+
+//cloud
+mainContext.beginPath();
+mainContext.arc(0, 0, 50, 0, Math.PI*2);
+mainContext.arc(80, 0, 50, 0, Math.PI*2);
+mainContext.arc(160, 0, 50, 0, Math.PI*2);
+mainContext.arc(240, 0, 50, 0, Math.PI*2);
+mainContext.arc(320, 0, 50, 0, Math.PI*2);
+mainContext.arc(400, 0, 50, 0, Math.PI*2);
+mainContext.closePath();
+//the outline
+mainContext.strokeStyle = 'rgb(213, 216, 212)';
+mainContext.stroke();
+mainContext.fillStyle = "rgb(213, 216, 212)";
+mainContext.fill();
 
       
 // draw the moon with gradient
-var moonGradient = mainContext.createRadialGradient(320, 80, 10, 350, 100, 50);
+var moonGradient = mainContext.createRadialGradient(320, 100, 10, 350, 100, 50);
 moonGradient.addColorStop(0.3, "red");
 moonGradient.addColorStop(0.9, "#B90000");
 mainContext.fillStyle = moonGradient;
 mainContext.beginPath();
-mainContext.arc(320, 100, 50, 0, Math.PI*2);
+mainContext.arc(320, 110, 50, 0, Math.PI*2);
 mainContext.fill();
 mainContext.closePath();
 
     
     
- // draw the snowflakes
+ // draw the snowflakes as different sizes
 for(var i=0;i<100;i++){
    mainContext.strokeStyle ="white";
    mainContext.beginPath();
-  mainContext.arc(Math.floor(Math.random()*(400)) , Math.floor(Math.random()*(400)),2, 0 ,2*Math.PI);
+   mainContext.arc(Math.floor(Math.random()*(400)) , Math.floor(Math.random()*(400)+45),Math.random(Math.random()*100), Math.random(Math.random()*100),Math.random(Math.random())*Math.PI);
    mainContext.stroke();
     mainContext.fillStyle ="white";
    mainContext.fill();

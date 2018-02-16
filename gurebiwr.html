@@ -20,6 +20,10 @@ var mainContext = mainCanvas.getContext("2d");
 var canvasWidth = mainCanvas.width;
 var canvasHeight = mainCanvas.height;
 var angle = 0;
+var xPos = 350;
+var requestId;
+var bodyElement = document.querySelector("body");
+//bodyElement.addEventListener("click", stopAnimation, false);
 
 // requesting animations
 var requestAnimationFrame = window.requestAnimationFrame || 
@@ -29,8 +33,6 @@ var requestAnimationFrame = window.requestAnimationFrame ||
                             
 // changes fps
 var framesPerSecond = 5;
- 
- 
 // function to create the scene
 function scene() {
     setTimeout(function() {
@@ -52,42 +54,28 @@ function scene() {
       
 // the rectangle
 mainContext.beginPath();
-mainContext.rect(0, 300, 450, 450);
+mainContext.rect(0, xPos, 400, 450);
 mainContext.closePath();
 
+ 
 // the outline
 mainContext.strokeStyle = 'white';
 mainContext.stroke();
 mainContext.fillStyle = "white";
 mainContext.fill();
 
-
-      
-// draw the moon with gradient
-var moonGradient = mainContext.createRadialGradient(320, 80, 10, 350, 100, 50);
-moonGradient.addColorStop(0.3, "red");
-moonGradient.addColorStop(0.9, "#B90000");
-mainContext.fillStyle = moonGradient;
-mainContext.beginPath();
-mainContext.arc(320, 100, 50, 0, Math.PI*2);
-mainContext.fill();
-mainContext.closePath();
-
-    
-    
- // draw the snowflakes
-for(var i=0;i<100;i++){
-   mainContext.strokeStyle ="white";
-   mainContext.beginPath();
-  mainContext.arc(Math.floor(Math.random()*(400)) , Math.floor(Math.random()*(400)),2, 0 ,2*Math.PI);
-   mainContext.stroke();
-    mainContext.fillStyle ="white";
-   mainContext.fill();
-mainContext.closePath();
-}
-            
-
- }, 1000 / framesPerSecond);
+ xPos -= 5;
+ 
+  if (xPos >= 350) {
+    xPos = 400;
+  }
+  
+  
+ if(xPos <= 200){
+     xPos = 200;
+ }
+  
+    }, 1000 / framesPerSecond);
 }
 scene();
 </script>
