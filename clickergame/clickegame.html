@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <body>
+      <style>
+        canvas{
+            background-image: url("svtfoe.jpg");
+        }
+      </style>
+        <canvas onclick="myFunction(event)" id="myCanvas" width="512" height="290" style="border:3px solid #fbff42;"></canvas>
+        <br>
+        <button onclick="location.reload()">Restart</button>
+    </body>
+    <head>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var score=0;
+            var lives=4;
+            var randx=Math.random()*500;
+            var randy=Math.random()*240;
+            var image2 = new Image();
+            var image1 = new Image();
+            var image3 = new Image();
+            image3.src="win.png";
+            image2.src="toffee.png";
+            image1.src="lose.jpg";
+            ctx.textAlign="center";
+            ctx.font="30px Comic Sans MS";
+            ctx.fillStyle = "#22f7a2";
+            ctx.fillText("Click The Screen to Start!", 260, 120);
+            //ctx.fillText("Score: "+score, 250, 280);
+       
+      
+            function myFunction(event){
+ 
+                var xpos=event.clientX;
+                var ypos=event.clientY;
+                if (xpos>=randx && xpos<=randx+50 && ypos>=randy && ypos<=randy+50){
+                    ctx.drawImage(image2, randx, randy,25, 25);
+                    ctx.clearRect(0, 0, 512, 290);
+                    score++;
+                    ctx.fillText("Score: "+score, 250, 280);
+                    ctx.fillText("Lives: "+lives, 60, 30);
+                    randx=Math.random()*500;
+                    randy=Math.random()*240;
+                    ctx.drawImage(image2, randx, randy,25, 25);
+                } else {
+                    ctx.clearRect(0, 0, 512, 290);
+                    lives--;
+                    ctx.fillText("Score: "+score, 250, 280);
+                    ctx.fillText("Lives: "+lives, 60, 30);
+                    randx=Math.random()*500;
+                    randy=Math.random()*240;
+                    ctx.drawImage(image2, randx, randy,25, 25);
+                    if (lives==0){
+                        ctx.drawImage(image1,0,0,518,290);   
+                       ctx.fillText("You have lost to the forces of evil", 250, 250);
+                       ctx.fillText("Click restart to fight again", 250, 280);
+                       alert("Game Over");
+                       // location.reload();
+                    }
+                }
+                if (score==2){
+                     ctx.drawImage(image3,0,0,518,290);  
+                        ctx.font="30px Comic Sans MS";
+                        ctx.fillStyle = "#66b512";
+                        ctx.fillText("You beat the forces of evil", 250, 250);
+                        ctx.fillText("Click restart to fight again", 250, 280);
+                        alert("You won!");
+                        //location.reload();
+                }
+            }
+        </script>
+    </head>
+</html>
