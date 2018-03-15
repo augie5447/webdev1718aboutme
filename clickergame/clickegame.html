@@ -21,16 +21,24 @@
             var image2 = new Image();
             var image1 = new Image();
             var image3 = new Image();
+            var image4 = new Image();
+            image4.src="butter.png"
             image3.src="win.png";
             image2.src="toffee.png";
             image1.src="lose.jpg";
             ctx.textAlign="center";
             ctx.font="30px Comic Sans MS";
             ctx.fillStyle = "#22f7a2";
-            ctx.fillText("Click The Screen to Start!", 260, 120);
-            //ctx.fillText("Score: "+score, 250, 280);
-       
-      
+            
+
+        
+        
+            image3.onload = function(){
+                ctx.drawImage(image3, 0, 0, 512, 290);
+                ctx.fillText("Fight the forces of evil", 260, 260);
+                ctx.fillText("Click The Screen to Start!", 260, 285);
+            };     
+     
             function myFunction(event){
  
                 var xpos=event.clientX;
@@ -57,17 +65,17 @@
                        ctx.fillText("You have lost to the forces of evil", 250, 250);
                        ctx.fillText("Click restart to fight again", 250, 280);
                        alert("Game Over");
-                       // location.reload();
+                       
                     }
                 }
-                if (score==2){
-                     ctx.drawImage(image3,0,0,518,290);  
+                if (score==3){
+                     ctx.drawImage(image4,0,0,518,290);  
                         ctx.font="30px Comic Sans MS";
-                        ctx.fillStyle = "#66b512";
+                        ctx.fillStyle = "#22f7a2";
                         ctx.fillText("You beat the forces of evil", 250, 250);
                         ctx.fillText("Click restart to fight again", 250, 280);
                         alert("You won!");
-                        //location.reload();
+                    
                 }
             }
         </script>
